@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
   user: 'root',
   // Your password
   password: 'Netsy001.',
-  database: 'employee_db',
+  database: 'employee_db'
 });
 
 // function which prompts the user for what action they should take
@@ -22,18 +22,14 @@ const start = () => {
       type: 'list',
       message: 'What would you like to do?',
       choices: ['View all Employees?', 'View all Employees by department', 'View Employees by manager?',
-    'Add Employees?', 'Remove Employees?', 'Update Employees role', 'Add role', 'Remove role', 'View all roles?'],
+    'Add Employees?', 'Remove Employees?', 'Update Employees role', 'Add role', 'Remove role', 'View all roles?', 'EXIT'],
     })
     .then((answer) => {
-      // based on their answer, either call the bid or the post functions
-      if (answer.select === 'View all Employees?') {
-        viewEmployees();
-      // } else if (answer.postOrBid === 'BID') {
-      //   bidAuction();
-      } else {
-        connection.end();
-      }
-    });
+    switch(answer.select){
+      case 'View all Employees?':viewEmployees();
+      break;
+    };
+  });
 };
 
 //view employess
