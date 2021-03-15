@@ -21,12 +21,24 @@ const start = () => {
       name: 'select',
       type: 'list',
       message: 'What would you like to do?',
-      choices: ['View all Employees?', 'View all Employees by department', 'View Employees by manager?',
-    'Add Employees?', 'Remove Employees?', 'Update Employees role', 'Add role', 'Remove role', 'View all roles?', 'EXIT'],
+      choices: ['View all Employees?', 'View all department?','View all roles?',
+    'Add Employees?','Add departments?','Add roles?', 'Update Employees role?', 'EXIT'],
     })
     .then((answer) => {
     switch(answer.select){
       case 'View all Employees?':viewEmployees();
+      break;
+      case 'View all department?':viewDepartment();
+      break;
+      case 'View all roles?':viewRolls();
+      break;
+      case 'Add Employees?':addEmployees();
+      break;
+      case 'Add departments?':addDepartments();
+      break;
+      case 'Add roles?':addRoles();
+      break;
+      case 'Update Employees role?':updateEmployees();
       break;
     };
   });
@@ -36,6 +48,29 @@ const start = () => {
 
 const viewEmployees = () =>{
   connection.query('SELECT * FROM employee', (err,res) => {
+    console.log(res)
+    console.table(res);
+    start();
+  });
+};
+
+const viewDepartment = () =>{
+  connection.query('SELECT * FROM department', (err,res) => {
+    console.log(res)
+    console.table(res);
+    start();
+  });
+};
+
+const viewRolls = () =>{
+  connection.query('SELECT * FROM role', (err,res) => {
+    console.log(res)
+    console.table(res);
+    start();
+  });
+};
+const addEmployees = () =>{
+  connection.query('SELECT * FROM role', (err,res) => {
     console.log(res)
     console.table(res);
     start();
