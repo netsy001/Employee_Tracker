@@ -1,4 +1,4 @@
-USE DATABASE employee_db;
+USE employee_db;
 
 -- //department seeds
 
@@ -26,17 +26,17 @@ INSERT INTO role (id,title, salary,department_id) VALUES (11, "CENTRE MANAGER",1
 
 -- //employee//
 
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "John","Jig",1,1);
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Mike","Mig",2,2);
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Charle","Chi",3,3);
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Sue","Sha",4,4);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("John","Jig",1,1);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Mike","Mig",2,2);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Charle","Chi",3,3);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Sue","Sha",4,4);
 
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Johnny","Joe",5,NULL);
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Peter","pet",5,NULL);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Johnny","Joe",5,NULL);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Peter","pet",5,NULL);
 
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Sam","Jam",6,NULL);
-INSERT INTO employee (id,first_name, last_name,role_id,manager_id) VALUES (1, "Samantha","Sain",6,NULL);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Sam","Jam",6,NULL);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Samantha","Sain",6,NULL);
 
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Joseph","Jazz",7,NULL);
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Honey","Horn",7,NULL);
-INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES (1, "Nick","Nike",7,NULL);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Joseph","Jazz",7,NULL);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Honey","Horn",7,NULL);
+INSERT INTO employee (first_name, last_name,role_id,manager_id) VALUES ("Nick","Nike",7,NULL);
