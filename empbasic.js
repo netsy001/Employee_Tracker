@@ -53,6 +53,7 @@ const viewEmployees = () => {
     start();
   });
 };
+
 //view departments
 const viewDepartment = () => {
   connection.query('SELECT * FROM department', (err, res) => {
@@ -61,6 +62,7 @@ const viewDepartment = () => {
     start();
   });
 };
+
 //view roles
 const viewRolls = () => {
   connection.query('SELECT * FROM role', (err, res) => {
@@ -77,12 +79,12 @@ const addEmployees = () => {
     inquirer
       .prompt([
         {
-          name: 'firstname',
+          name: 'first_name',
           type: 'input',
           message: 'What is the employee firstname?',
         },
         {
-          name: 'lastname',
+          name: 'last_name',
           type: 'input',
           message: 'What is the employee lastname?',
         },
@@ -121,6 +123,7 @@ const addEmployees = () => {
           (err) => {
             if (err) throw err;
             console.log('Created successfully!');
+            console.table(res);
             start();
           });
       });
@@ -199,7 +202,7 @@ const addRoles = () => {
       })
   })
 };
-
+//exit
 const exit = () => {
   connection.end();
 };
